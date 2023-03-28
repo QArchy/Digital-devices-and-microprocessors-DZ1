@@ -7,9 +7,9 @@ LED-D <= inst12.DB_MAX_OUTPUT_PORT_TYPE
 LED-E <= inst13.DB_MAX_OUTPUT_PORT_TYPE
 LED-F <= inst14.DB_MAX_OUTPUT_PORT_TYPE
 LED-G <= inst15.DB_MAX_OUTPUT_PORT_TYPE
-A1 <= counter3Bit_reset:inst2.Q1
-A2 <= counter3Bit_reset:inst2.Q2
-A0 <= counter3Bit_reset:inst2.Q0
+A1 <= count[1].DB_MAX_OUTPUT_PORT_TYPE
+A2 <= count[2].DB_MAX_OUTPUT_PORT_TYPE
+A0 <= count[0].DB_MAX_OUTPUT_PORT_TYPE
 U2_138_select <= <VCC>
 U3_138_select <= <VCC>
 
@@ -171,40 +171,13 @@ y2 <= inst10.DB_MAX_OUTPUT_PORT_TYPE
 y3 <= inst22.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|main|count_down:inst10
-y1 <= inst9.DB_MAX_OUTPUT_PORT_TYPE
-x0 => inst8.IN0
-x0 => inst1.IN0
-x0 => inst1.IN1
-x0 => inst11.IN0
-x1 => inst8.IN1
-x1 => inst5.IN1
-x1 => inst2.IN0
-x1 => inst2.IN1
-x2 => inst3.IN0
-x2 => inst3.IN1
-x2 => inst6.IN2
-y0 <= inst7.DB_MAX_OUTPUT_PORT_TYPE
-y2 <= inst10.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|main|counter3Bit_reset:inst2
-Q0 <= out_pos[0].DB_MAX_OUTPUT_PORT_TYPE
-clk => counter3bit:inst.clk
-Q1 <= out_pos[1].DB_MAX_OUTPUT_PORT_TYPE
-Q2 <= out_pos[2].DB_MAX_OUTPUT_PORT_TYPE
-
-
-|main|counter3Bit_reset:inst2|counter3bit:inst
-clk => out_pos[0]~reg0.CLK
-clk => out_pos[1]~reg0.CLK
-clk => out_pos[2]~reg0.CLK
-reset => out_pos.OUTPUTSELECT
-reset => out_pos.OUTPUTSELECT
-reset => out_pos.OUTPUTSELECT
-out_pos[0] <= out_pos[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-out_pos[1] <= out_pos[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-out_pos[2] <= out_pos[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+|main|subtractor:inst2
+clk => count[0]~reg0.CLK
+clk => count[1]~reg0.CLK
+clk => count[2]~reg0.CLK
+count[0] <= count[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+count[1] <= count[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+count[2] <= count[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |main|counter:inst

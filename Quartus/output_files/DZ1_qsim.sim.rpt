@@ -1,5 +1,5 @@
 Simulator report for DZ1_qsim
-Tue Mar 28 10:05:09 2023
+Tue Mar 28 19:39:00 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
 
 
@@ -45,9 +45,9 @@ applicable agreement for further details.
 +-----------------------------+--------------+
 ; Simulation Start Time       ; 0 ps         ;
 ; Simulation End Time         ; 1.0 us       ;
-; Simulation Netlist Size     ; 94 nodes     ;
-; Simulation Coverage         ;      93.62 % ;
-; Total Number of Transitions ; 2607         ;
+; Simulation Netlist Size     ; 86 nodes     ;
+; Simulation Coverage         ;      93.02 % ;
+; Total Number of Transitions ; 2600         ;
 ; Simulation Breakpoints      ; 0            ;
 ; Family                      ; Cyclone III  ;
 +-----------------------------+--------------+
@@ -96,10 +96,10 @@ Please use Quartus II 64-Bit to view the waveform report data.
 +-----------------------------------------------------+--------------+
 ; Type                                                ; Value        ;
 +-----------------------------------------------------+--------------+
-; Total coverage as a percentage                      ;      93.62 % ;
-; Total nodes checked                                 ; 94           ;
-; Total output ports checked                          ; 94           ;
-; Total output ports with complete 1/0-value coverage ; 88           ;
+; Total coverage as a percentage                      ;      93.02 % ;
+; Total nodes checked                                 ; 86           ;
+; Total output ports checked                          ; 86           ;
+; Total output ports with complete 1/0-value coverage ; 80           ;
 ; Total output ports with no 1/0-value coverage       ; 6            ;
 ; Total output ports with no 1-value coverage         ; 6            ;
 ; Total output ports with no 0-value coverage         ; 6            ;
@@ -107,100 +107,92 @@ Please use Quartus II 64-Bit to view the waveform report data.
 
 
 The following table displays output ports that toggle between 1 and 0 during simulation.
-+------------------------------------------------------------------------------------------------------------------------------------------+
-; Complete 1/0-Value Coverage                                                                                                              ;
-+-----------------------------------------------------------+-----------------------------------------------------------+------------------+
-; Node Name                                                 ; Output Port Name                                          ; Output Port Type ;
-+-----------------------------------------------------------+-----------------------------------------------------------+------------------+
-; |main|LED-A                                               ; |main|LED-A                                               ; pin_out          ;
-; |main|clk                                                 ; |main|clk                                                 ; out              ;
-; |main|LED-B                                               ; |main|LED-B                                               ; pin_out          ;
-; |main|LED-C                                               ; |main|LED-C                                               ; pin_out          ;
-; |main|LED-D                                               ; |main|LED-D                                               ; pin_out          ;
-; |main|LED-E                                               ; |main|LED-E                                               ; pin_out          ;
-; |main|LED-F                                               ; |main|LED-F                                               ; pin_out          ;
-; |main|LED-G                                               ; |main|LED-G                                               ; pin_out          ;
-; |main|A1                                                  ; |main|A1                                                  ; pin_out          ;
-; |main|A2                                                  ; |main|A2                                                  ; pin_out          ;
-; |main|A0                                                  ; |main|A0                                                  ; pin_out          ;
-; |main|counter3Bit_reset:inst2|inst5                       ; |main|counter3Bit_reset:inst2|inst5                       ; out0             ;
-; |main|counter3Bit_reset:inst2|inst3                       ; |main|counter3Bit_reset:inst2|inst3                       ; out0             ;
-; |main|counter3Bit_reset:inst2|counter3bit:inst|out_pos~0  ; |main|counter3Bit_reset:inst2|counter3bit:inst|out_pos~0  ; out              ;
-; |main|counter3Bit_reset:inst2|counter3bit:inst|out_pos~1  ; |main|counter3Bit_reset:inst2|counter3bit:inst|out_pos~1  ; out              ;
-; |main|counter3Bit_reset:inst2|counter3bit:inst|out_pos~2  ; |main|counter3Bit_reset:inst2|counter3bit:inst|out_pos~2  ; out              ;
-; |main|counter3Bit_reset:inst2|counter3bit:inst|out_pos[0] ; |main|counter3Bit_reset:inst2|counter3bit:inst|out_pos[0] ; regout           ;
-; |main|counter3Bit_reset:inst2|counter3bit:inst|out_pos[1] ; |main|counter3Bit_reset:inst2|counter3bit:inst|out_pos[1] ; regout           ;
-; |main|counter3Bit_reset:inst2|counter3bit:inst|out_pos[2] ; |main|counter3Bit_reset:inst2|counter3bit:inst|out_pos[2] ; regout           ;
-; |main|count_down:inst10|inst9                             ; |main|count_down:inst10|inst9                             ; out0             ;
-; |main|count_down:inst10|inst8                             ; |main|count_down:inst10|inst8                             ; out0             ;
-; |main|count_down:inst10|inst5                             ; |main|count_down:inst10|inst5                             ; out0             ;
-; |main|count_down:inst10|inst7                             ; |main|count_down:inst10|inst7                             ; out0             ;
-; |main|count_down:inst10|inst6                             ; |main|count_down:inst10|inst6                             ; out0             ;
-; |main|count_down:inst10|inst                              ; |main|count_down:inst10|inst                              ; out0             ;
-; |main|count_down:inst10|inst10                            ; |main|count_down:inst10|inst10                            ; out0             ;
-; |main|count_down:inst10|inst11                            ; |main|count_down:inst10|inst11                            ; out0             ;
-; |main|recoder_schema:inst1|inst10                         ; |main|recoder_schema:inst1|inst10                         ; out0             ;
-; |main|recoder_schema:inst1|inst14                         ; |main|recoder_schema:inst1|inst14                         ; out0             ;
-; |main|recoder_schema:inst1|inst12                         ; |main|recoder_schema:inst1|inst12                         ; out0             ;
-; |main|recoder_schema:inst1|inst6                          ; |main|recoder_schema:inst1|inst6                          ; out0             ;
-; |main|recoder_schema:inst1|inst4                          ; |main|recoder_schema:inst1|inst4                          ; out0             ;
-; |main|recoder_schema:inst1|inst11                         ; |main|recoder_schema:inst1|inst11                         ; out0             ;
-; |main|recoder_schema:inst1|inst17                         ; |main|recoder_schema:inst1|inst17                         ; out0             ;
-; |main|recoder_schema:inst1|inst15                         ; |main|recoder_schema:inst1|inst15                         ; out0             ;
-; |main|recoder_schema:inst1|inst97                         ; |main|recoder_schema:inst1|inst97                         ; out0             ;
-; |main|recoder_schema:inst1|inst99                         ; |main|recoder_schema:inst1|inst99                         ; out0             ;
-; |main|recoder_schema:inst1|inst20                         ; |main|recoder_schema:inst1|inst20                         ; out0             ;
-; |main|recoder_schema:inst1|inst19                         ; |main|recoder_schema:inst1|inst19                         ; out0             ;
-; |main|BCD_schema:inst6|g_schema:G_G|NAND_42               ; |main|BCD_schema:inst6|g_schema:G_G|NAND_42               ; out0             ;
-; |main|BCD_schema:inst6|g_schema:G_G|NAND_49               ; |main|BCD_schema:inst6|g_schema:G_G|NAND_49               ; out0             ;
-; |main|BCD_schema:inst6|g_schema:G_G|NAND_48               ; |main|BCD_schema:inst6|g_schema:G_G|NAND_48               ; out0             ;
-; |main|BCD_schema:inst6|g_schema:G_G|NAND_47               ; |main|BCD_schema:inst6|g_schema:G_G|NAND_47               ; out0             ;
-; |main|BCD_schema:inst6|g_schema:G_G|NAND_98               ; |main|BCD_schema:inst6|g_schema:G_G|NAND_98               ; out0             ;
-; |main|BCD_schema:inst6|g_schema:G_G|NAND_46               ; |main|BCD_schema:inst6|g_schema:G_G|NAND_46               ; out0             ;
-; |main|BCD_schema:inst6|g_schema:G_G|NAND_45               ; |main|BCD_schema:inst6|g_schema:G_G|NAND_45               ; out0             ;
-; |main|BCD_schema:inst6|g_schema:G_G|NAND_99               ; |main|BCD_schema:inst6|g_schema:G_G|NAND_99               ; out0             ;
-; |main|BCD_schema:inst6|g_schema:G_G|NAND_41               ; |main|BCD_schema:inst6|g_schema:G_G|NAND_41               ; out0             ;
-; |main|BCD_schema:inst6|f_schema:F_F|NAND_36               ; |main|BCD_schema:inst6|f_schema:F_F|NAND_36               ; out0             ;
-; |main|BCD_schema:inst6|f_schema:F_F|NAND_48               ; |main|BCD_schema:inst6|f_schema:F_F|NAND_48               ; out0             ;
-; |main|BCD_schema:inst6|f_schema:F_F|NAND_38               ; |main|BCD_schema:inst6|f_schema:F_F|NAND_38               ; out0             ;
-; |main|BCD_schema:inst6|f_schema:F_F|NAND_50               ; |main|BCD_schema:inst6|f_schema:F_F|NAND_50               ; out0             ;
-; |main|BCD_schema:inst6|f_schema:F_F|NAND_39               ; |main|BCD_schema:inst6|f_schema:F_F|NAND_39               ; out0             ;
-; |main|BCD_schema:inst6|e_schema:E_E|NAND_35               ; |main|BCD_schema:inst6|e_schema:E_E|NAND_35               ; out0             ;
-; |main|BCD_schema:inst6|e_schema:E_E|NAND_41               ; |main|BCD_schema:inst6|e_schema:E_E|NAND_41               ; out0             ;
-; |main|BCD_schema:inst6|e_schema:E_E|NAND_33               ; |main|BCD_schema:inst6|e_schema:E_E|NAND_33               ; out0             ;
-; |main|BCD_schema:inst6|d_schema:D_D|NAND_29               ; |main|BCD_schema:inst6|d_schema:D_D|NAND_29               ; out0             ;
-; |main|BCD_schema:inst6|d_schema:D_D|NAND_28               ; |main|BCD_schema:inst6|d_schema:D_D|NAND_28               ; out0             ;
-; |main|BCD_schema:inst6|d_schema:D_D|NAND_26               ; |main|BCD_schema:inst6|d_schema:D_D|NAND_26               ; out0             ;
-; |main|BCD_schema:inst6|d_schema:D_D|NAND_99               ; |main|BCD_schema:inst6|d_schema:D_D|NAND_99               ; out0             ;
-; |main|BCD_schema:inst6|d_schema:D_D|NAND_16               ; |main|BCD_schema:inst6|d_schema:D_D|NAND_16               ; out0             ;
-; |main|BCD_schema:inst6|d_schema:D_D|NAND_10               ; |main|BCD_schema:inst6|d_schema:D_D|NAND_10               ; out0             ;
-; |main|BCD_schema:inst6|d_schema:D_D|NAND_21               ; |main|BCD_schema:inst6|d_schema:D_D|NAND_21               ; out0             ;
-; |main|BCD_schema:inst6|d_schema:D_D|NAND_19               ; |main|BCD_schema:inst6|d_schema:D_D|NAND_19               ; out0             ;
-; |main|BCD_schema:inst6|c_schema:C_C|NAND_9                ; |main|BCD_schema:inst6|c_schema:C_C|NAND_9                ; out0             ;
-; |main|BCD_schema:inst6|c_schema:C_C|NAND_3                ; |main|BCD_schema:inst6|c_schema:C_C|NAND_3                ; out0             ;
-; |main|BCD_schema:inst6|c_schema:C_C|NAND_7                ; |main|BCD_schema:inst6|c_schema:C_C|NAND_7                ; out0             ;
-; |main|BCD_schema:inst6|c_schema:C_C|NAND_4                ; |main|BCD_schema:inst6|c_schema:C_C|NAND_4                ; out0             ;
-; |main|BCD_schema:inst6|c_schema:C_C|NAND_6                ; |main|BCD_schema:inst6|c_schema:C_C|NAND_6                ; out0             ;
-; |main|BCD_schema:inst6|b_schema:B_B|NAND_16               ; |main|BCD_schema:inst6|b_schema:B_B|NAND_16               ; out0             ;
-; |main|BCD_schema:inst6|b_schema:B_B|NAND_15               ; |main|BCD_schema:inst6|b_schema:B_B|NAND_15               ; out0             ;
-; |main|BCD_schema:inst6|b_schema:B_B|NAND_11               ; |main|BCD_schema:inst6|b_schema:B_B|NAND_11               ; out0             ;
-; |main|BCD_schema:inst6|b_schema:B_B|NAND_9                ; |main|BCD_schema:inst6|b_schema:B_B|NAND_9                ; out0             ;
-; |main|BCD_schema:inst6|b_schema:B_B|NAND_8                ; |main|BCD_schema:inst6|b_schema:B_B|NAND_8                ; out0             ;
-; |main|BCD_schema:inst6|b_schema:B_B|NAND_13               ; |main|BCD_schema:inst6|b_schema:B_B|NAND_13               ; out0             ;
-; |main|BCD_schema:inst6|b_schema:B_B|NAND_6                ; |main|BCD_schema:inst6|b_schema:B_B|NAND_6                ; out0             ;
-; |main|BCD_schema:inst6|b_schema:B_B|NAND_5                ; |main|BCD_schema:inst6|b_schema:B_B|NAND_5                ; out0             ;
-; |main|BCD_schema:inst6|b_schema:B_B|NAND_99               ; |main|BCD_schema:inst6|b_schema:B_B|NAND_99               ; out0             ;
-; |main|BCD_schema:inst6|a_schema:A_A|NAND_20               ; |main|BCD_schema:inst6|a_schema:A_A|NAND_20               ; out0             ;
-; |main|BCD_schema:inst6|a_schema:A_A|NAND_17               ; |main|BCD_schema:inst6|a_schema:A_A|NAND_17               ; out0             ;
-; |main|BCD_schema:inst6|a_schema:A_A|NAND_11               ; |main|BCD_schema:inst6|a_schema:A_A|NAND_11               ; out0             ;
-; |main|BCD_schema:inst6|a_schema:A_A|NAND_8                ; |main|BCD_schema:inst6|a_schema:A_A|NAND_8                ; out0             ;
-; |main|BCD_schema:inst6|a_schema:A_A|NAND_19               ; |main|BCD_schema:inst6|a_schema:A_A|NAND_19               ; out0             ;
-; |main|BCD_schema:inst6|a_schema:A_A|NAND_14               ; |main|BCD_schema:inst6|a_schema:A_A|NAND_14               ; out0             ;
-; |main|BCD_schema:inst6|a_schema:A_A|NAND_4                ; |main|BCD_schema:inst6|a_schema:A_A|NAND_4                ; out0             ;
-; |main|counter3Bit_reset:inst2|counter3bit:inst|Add0~0     ; |main|counter3Bit_reset:inst2|counter3bit:inst|Add0~0     ; out0             ;
-; |main|counter3Bit_reset:inst2|counter3bit:inst|Add0~1     ; |main|counter3Bit_reset:inst2|counter3bit:inst|Add0~1     ; out0             ;
-; |main|counter3Bit_reset:inst2|counter3bit:inst|Add0~2     ; |main|counter3Bit_reset:inst2|counter3bit:inst|Add0~2     ; out0             ;
-+-----------------------------------------------------------+-----------------------------------------------------------+------------------+
++--------------------------------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                                                  ;
++---------------------------------------------+---------------------------------------------+------------------+
+; Node Name                                   ; Output Port Name                            ; Output Port Type ;
++---------------------------------------------+---------------------------------------------+------------------+
+; |main|LED-A                                 ; |main|LED-A                                 ; pin_out          ;
+; |main|clk                                   ; |main|clk                                   ; out              ;
+; |main|LED-B                                 ; |main|LED-B                                 ; pin_out          ;
+; |main|LED-C                                 ; |main|LED-C                                 ; pin_out          ;
+; |main|LED-D                                 ; |main|LED-D                                 ; pin_out          ;
+; |main|LED-E                                 ; |main|LED-E                                 ; pin_out          ;
+; |main|LED-F                                 ; |main|LED-F                                 ; pin_out          ;
+; |main|LED-G                                 ; |main|LED-G                                 ; pin_out          ;
+; |main|A1                                    ; |main|A1                                    ; pin_out          ;
+; |main|A2                                    ; |main|A2                                    ; pin_out          ;
+; |main|A0                                    ; |main|A0                                    ; pin_out          ;
+; |main|subtractor:inst2|count[2]             ; |main|subtractor:inst2|count[2]             ; regout           ;
+; |main|subtractor:inst2|count[1]             ; |main|subtractor:inst2|count[1]             ; regout           ;
+; |main|subtractor:inst2|count[0]             ; |main|subtractor:inst2|count[0]             ; regout           ;
+; |main|subtractor:inst2|count~0              ; |main|subtractor:inst2|count~0              ; out              ;
+; |main|subtractor:inst2|count~1              ; |main|subtractor:inst2|count~1              ; out              ;
+; |main|subtractor:inst2|count~2              ; |main|subtractor:inst2|count~2              ; out              ;
+; |main|recoder_schema:inst1|inst10           ; |main|recoder_schema:inst1|inst10           ; out0             ;
+; |main|recoder_schema:inst1|inst14           ; |main|recoder_schema:inst1|inst14           ; out0             ;
+; |main|recoder_schema:inst1|inst12           ; |main|recoder_schema:inst1|inst12           ; out0             ;
+; |main|recoder_schema:inst1|inst6            ; |main|recoder_schema:inst1|inst6            ; out0             ;
+; |main|recoder_schema:inst1|inst4            ; |main|recoder_schema:inst1|inst4            ; out0             ;
+; |main|recoder_schema:inst1|inst11           ; |main|recoder_schema:inst1|inst11           ; out0             ;
+; |main|recoder_schema:inst1|inst17           ; |main|recoder_schema:inst1|inst17           ; out0             ;
+; |main|recoder_schema:inst1|inst15           ; |main|recoder_schema:inst1|inst15           ; out0             ;
+; |main|recoder_schema:inst1|inst97           ; |main|recoder_schema:inst1|inst97           ; out0             ;
+; |main|recoder_schema:inst1|inst99           ; |main|recoder_schema:inst1|inst99           ; out0             ;
+; |main|recoder_schema:inst1|inst20           ; |main|recoder_schema:inst1|inst20           ; out0             ;
+; |main|recoder_schema:inst1|inst19           ; |main|recoder_schema:inst1|inst19           ; out0             ;
+; |main|BCD_schema:inst6|g_schema:G_G|NAND_42 ; |main|BCD_schema:inst6|g_schema:G_G|NAND_42 ; out0             ;
+; |main|BCD_schema:inst6|g_schema:G_G|NAND_49 ; |main|BCD_schema:inst6|g_schema:G_G|NAND_49 ; out0             ;
+; |main|BCD_schema:inst6|g_schema:G_G|NAND_48 ; |main|BCD_schema:inst6|g_schema:G_G|NAND_48 ; out0             ;
+; |main|BCD_schema:inst6|g_schema:G_G|NAND_47 ; |main|BCD_schema:inst6|g_schema:G_G|NAND_47 ; out0             ;
+; |main|BCD_schema:inst6|g_schema:G_G|NAND_98 ; |main|BCD_schema:inst6|g_schema:G_G|NAND_98 ; out0             ;
+; |main|BCD_schema:inst6|g_schema:G_G|NAND_46 ; |main|BCD_schema:inst6|g_schema:G_G|NAND_46 ; out0             ;
+; |main|BCD_schema:inst6|g_schema:G_G|NAND_45 ; |main|BCD_schema:inst6|g_schema:G_G|NAND_45 ; out0             ;
+; |main|BCD_schema:inst6|g_schema:G_G|NAND_99 ; |main|BCD_schema:inst6|g_schema:G_G|NAND_99 ; out0             ;
+; |main|BCD_schema:inst6|g_schema:G_G|NAND_41 ; |main|BCD_schema:inst6|g_schema:G_G|NAND_41 ; out0             ;
+; |main|BCD_schema:inst6|f_schema:F_F|NAND_36 ; |main|BCD_schema:inst6|f_schema:F_F|NAND_36 ; out0             ;
+; |main|BCD_schema:inst6|f_schema:F_F|NAND_48 ; |main|BCD_schema:inst6|f_schema:F_F|NAND_48 ; out0             ;
+; |main|BCD_schema:inst6|f_schema:F_F|NAND_38 ; |main|BCD_schema:inst6|f_schema:F_F|NAND_38 ; out0             ;
+; |main|BCD_schema:inst6|f_schema:F_F|NAND_50 ; |main|BCD_schema:inst6|f_schema:F_F|NAND_50 ; out0             ;
+; |main|BCD_schema:inst6|f_schema:F_F|NAND_39 ; |main|BCD_schema:inst6|f_schema:F_F|NAND_39 ; out0             ;
+; |main|BCD_schema:inst6|e_schema:E_E|NAND_35 ; |main|BCD_schema:inst6|e_schema:E_E|NAND_35 ; out0             ;
+; |main|BCD_schema:inst6|e_schema:E_E|NAND_41 ; |main|BCD_schema:inst6|e_schema:E_E|NAND_41 ; out0             ;
+; |main|BCD_schema:inst6|e_schema:E_E|NAND_33 ; |main|BCD_schema:inst6|e_schema:E_E|NAND_33 ; out0             ;
+; |main|BCD_schema:inst6|d_schema:D_D|NAND_29 ; |main|BCD_schema:inst6|d_schema:D_D|NAND_29 ; out0             ;
+; |main|BCD_schema:inst6|d_schema:D_D|NAND_28 ; |main|BCD_schema:inst6|d_schema:D_D|NAND_28 ; out0             ;
+; |main|BCD_schema:inst6|d_schema:D_D|NAND_26 ; |main|BCD_schema:inst6|d_schema:D_D|NAND_26 ; out0             ;
+; |main|BCD_schema:inst6|d_schema:D_D|NAND_99 ; |main|BCD_schema:inst6|d_schema:D_D|NAND_99 ; out0             ;
+; |main|BCD_schema:inst6|d_schema:D_D|NAND_16 ; |main|BCD_schema:inst6|d_schema:D_D|NAND_16 ; out0             ;
+; |main|BCD_schema:inst6|d_schema:D_D|NAND_10 ; |main|BCD_schema:inst6|d_schema:D_D|NAND_10 ; out0             ;
+; |main|BCD_schema:inst6|d_schema:D_D|NAND_21 ; |main|BCD_schema:inst6|d_schema:D_D|NAND_21 ; out0             ;
+; |main|BCD_schema:inst6|d_schema:D_D|NAND_19 ; |main|BCD_schema:inst6|d_schema:D_D|NAND_19 ; out0             ;
+; |main|BCD_schema:inst6|c_schema:C_C|NAND_9  ; |main|BCD_schema:inst6|c_schema:C_C|NAND_9  ; out0             ;
+; |main|BCD_schema:inst6|c_schema:C_C|NAND_3  ; |main|BCD_schema:inst6|c_schema:C_C|NAND_3  ; out0             ;
+; |main|BCD_schema:inst6|c_schema:C_C|NAND_7  ; |main|BCD_schema:inst6|c_schema:C_C|NAND_7  ; out0             ;
+; |main|BCD_schema:inst6|c_schema:C_C|NAND_4  ; |main|BCD_schema:inst6|c_schema:C_C|NAND_4  ; out0             ;
+; |main|BCD_schema:inst6|c_schema:C_C|NAND_6  ; |main|BCD_schema:inst6|c_schema:C_C|NAND_6  ; out0             ;
+; |main|BCD_schema:inst6|b_schema:B_B|NAND_16 ; |main|BCD_schema:inst6|b_schema:B_B|NAND_16 ; out0             ;
+; |main|BCD_schema:inst6|b_schema:B_B|NAND_15 ; |main|BCD_schema:inst6|b_schema:B_B|NAND_15 ; out0             ;
+; |main|BCD_schema:inst6|b_schema:B_B|NAND_11 ; |main|BCD_schema:inst6|b_schema:B_B|NAND_11 ; out0             ;
+; |main|BCD_schema:inst6|b_schema:B_B|NAND_9  ; |main|BCD_schema:inst6|b_schema:B_B|NAND_9  ; out0             ;
+; |main|BCD_schema:inst6|b_schema:B_B|NAND_8  ; |main|BCD_schema:inst6|b_schema:B_B|NAND_8  ; out0             ;
+; |main|BCD_schema:inst6|b_schema:B_B|NAND_13 ; |main|BCD_schema:inst6|b_schema:B_B|NAND_13 ; out0             ;
+; |main|BCD_schema:inst6|b_schema:B_B|NAND_6  ; |main|BCD_schema:inst6|b_schema:B_B|NAND_6  ; out0             ;
+; |main|BCD_schema:inst6|b_schema:B_B|NAND_5  ; |main|BCD_schema:inst6|b_schema:B_B|NAND_5  ; out0             ;
+; |main|BCD_schema:inst6|b_schema:B_B|NAND_99 ; |main|BCD_schema:inst6|b_schema:B_B|NAND_99 ; out0             ;
+; |main|BCD_schema:inst6|a_schema:A_A|NAND_20 ; |main|BCD_schema:inst6|a_schema:A_A|NAND_20 ; out0             ;
+; |main|BCD_schema:inst6|a_schema:A_A|NAND_17 ; |main|BCD_schema:inst6|a_schema:A_A|NAND_17 ; out0             ;
+; |main|BCD_schema:inst6|a_schema:A_A|NAND_11 ; |main|BCD_schema:inst6|a_schema:A_A|NAND_11 ; out0             ;
+; |main|BCD_schema:inst6|a_schema:A_A|NAND_8  ; |main|BCD_schema:inst6|a_schema:A_A|NAND_8  ; out0             ;
+; |main|BCD_schema:inst6|a_schema:A_A|NAND_19 ; |main|BCD_schema:inst6|a_schema:A_A|NAND_19 ; out0             ;
+; |main|BCD_schema:inst6|a_schema:A_A|NAND_14 ; |main|BCD_schema:inst6|a_schema:A_A|NAND_14 ; out0             ;
+; |main|BCD_schema:inst6|a_schema:A_A|NAND_4  ; |main|BCD_schema:inst6|a_schema:A_A|NAND_4  ; out0             ;
+; |main|subtractor:inst2|Add0~0               ; |main|subtractor:inst2|Add0~0               ; out0             ;
+; |main|subtractor:inst2|Add0~1               ; |main|subtractor:inst2|Add0~1               ; out0             ;
+; |main|subtractor:inst2|Add0~2               ; |main|subtractor:inst2|Add0~2               ; out0             ;
+; |main|subtractor:inst2|Add0~3               ; |main|subtractor:inst2|Add0~3               ; out0             ;
+; |main|subtractor:inst2|Equal0~0             ; |main|subtractor:inst2|Equal0~0             ; out0             ;
++---------------------------------------------+---------------------------------------------+------------------+
 
 
 The following table displays output ports that do not toggle to 1 during simulation.
@@ -246,18 +238,18 @@ The following table displays output ports that do not toggle to 0 during simulat
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Simulator
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
-    Info: Processing started: Tue Mar 28 10:05:08 2023
+    Info: Processing started: Tue Mar 28 19:38:59 2023
 Info: Command: quartus_sim --simulation_results_format=VWF DZ1 -c DZ1_qsim
 Info (324025): Using vector source file "C:/Users/xyarc/YandexDisk/Byz/Digital devices and microprocessors/DZ1/Quartus/Waveform.vwf"
 Info (310003): Option to preserve fewer signal transitions to reduce memory requirements is enabled
     Info (310004): Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
 Info (310002): Simulation partitioned into 1 sub-simulations
-Info (328053): Simulation coverage is      93.62 %
-Info (328052): Number of transitions in simulation is 2607
+Info (328053): Simulation coverage is      93.02 %
+Info (328052): Number of transitions in simulation is 2600
 Info (324045): Vector file DZ1_qsim.sim.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
 Info: Quartus II 64-Bit Simulator was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 4449 megabytes
-    Info: Processing ended: Tue Mar 28 10:05:09 2023
+    Info: Peak virtual memory: 4447 megabytes
+    Info: Processing ended: Tue Mar 28 19:39:00 2023
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 

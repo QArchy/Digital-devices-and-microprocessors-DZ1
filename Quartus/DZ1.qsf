@@ -61,7 +61,11 @@ set_location_assignment PIN_L4 -to A1
 set_location_assignment PIN_F8 -to A0
 set_location_assignment PIN_G5 -to U2_138_select
 set_location_assignment PIN_J1 -to U3_138_select
-set_global_assignment -name BDF_FILE count_down.bdf
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_location_assignment PIN_D1 -to "LED-A"
+set_location_assignment PIN_E1 -to clk
+set_global_assignment -name VERILOG_FILE Subtractor.v
 set_global_assignment -name BDF_FILE main.bdf
 set_global_assignment -name BDF_FILE b_schema.bdf
 set_global_assignment -name BDF_FILE a_schema.bdf
@@ -73,15 +77,9 @@ set_global_assignment -name BDF_FILE g_schema.bdf
 set_global_assignment -name BDF_FILE BCD_schema.bdf
 set_global_assignment -name BDF_FILE recoder_schema.bdf
 set_global_assignment -name VERILOG_FILE inputCounter.v
-set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
-set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
-set_global_assignment -name VERILOG_FILE counter3Bit.v
-set_global_assignment -name BDF_FILE counter3Bit_reset.bdf
 set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform.vwf
-set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE "C:/Users/xyarc/YandexDisk/Byz/Digital devices and microprocessors/DZ1/Quartus/Waveform.vwf"
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
-set_location_assignment PIN_D1 -to "LED-A"
-set_location_assignment PIN_E1 -to clk
+set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE "C:/Users/xyarc/YandexDisk/Byz/Digital devices and microprocessors/DZ1/Quartus/Waveform.vwf"
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

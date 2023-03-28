@@ -398,92 +398,6 @@ applicable agreement for further details.
 	)
 )
 (symbol
-	(rect 696 320 792 416)
-	(text "count_down" (rect 5 0 76 14)(font "Arial" (font_size 8)))
-	(text "inst10" (rect 8 80 37 92)(font "Arial" ))
-	(port
-		(pt 0 32)
-		(input)
-		(text "x0" (rect 0 0 14 14)(font "Arial" (font_size 8)))
-		(text "x0" (rect 21 27 35 41)(font "Arial" (font_size 8)))
-		(line (pt 0 32)(pt 16 32))
-	)
-	(port
-		(pt 0 48)
-		(input)
-		(text "x1" (rect 0 0 14 14)(font "Arial" (font_size 8)))
-		(text "x1" (rect 21 43 35 57)(font "Arial" (font_size 8)))
-		(line (pt 0 48)(pt 16 48))
-	)
-	(port
-		(pt 0 64)
-		(input)
-		(text "x2" (rect 0 0 14 14)(font "Arial" (font_size 8)))
-		(text "x2" (rect 21 59 35 73)(font "Arial" (font_size 8)))
-		(line (pt 0 64)(pt 16 64))
-	)
-	(port
-		(pt 96 32)
-		(output)
-		(text "y0" (rect 0 0 14 14)(font "Arial" (font_size 8)))
-		(text "y0" (rect 61 27 75 41)(font "Arial" (font_size 8)))
-		(line (pt 96 32)(pt 80 32))
-	)
-	(port
-		(pt 96 48)
-		(output)
-		(text "y1" (rect 0 0 14 14)(font "Arial" (font_size 8)))
-		(text "y1" (rect 61 43 75 57)(font "Arial" (font_size 8)))
-		(line (pt 96 48)(pt 80 48))
-	)
-	(port
-		(pt 96 64)
-		(output)
-		(text "y2" (rect 0 0 14 14)(font "Arial" (font_size 8)))
-		(text "y2" (rect 61 59 75 73)(font "Arial" (font_size 8)))
-		(line (pt 96 64)(pt 80 64))
-	)
-	(drawing
-		(rectangle (rect 16 16 80 80))
-	)
-)
-(symbol
-	(rect 536 320 632 416)
-	(text "counter3Bit_reset" (rect 5 0 106 14)(font "Arial" (font_size 8)))
-	(text "inst2" (rect 8 80 31 92)(font "Arial" ))
-	(port
-		(pt 0 32)
-		(input)
-		(text "clk" (rect 0 0 15 14)(font "Arial" (font_size 8)))
-		(text "clk" (rect 21 27 36 41)(font "Arial" (font_size 8)))
-		(line (pt 0 32)(pt 16 32))
-	)
-	(port
-		(pt 96 32)
-		(output)
-		(text "Q0" (rect 0 0 16 14)(font "Arial" (font_size 8)))
-		(text "Q0" (rect 59 27 75 41)(font "Arial" (font_size 8)))
-		(line (pt 96 32)(pt 80 32))
-	)
-	(port
-		(pt 96 48)
-		(output)
-		(text "Q1" (rect 0 0 16 14)(font "Arial" (font_size 8)))
-		(text "Q1" (rect 59 43 75 57)(font "Arial" (font_size 8)))
-		(line (pt 96 48)(pt 80 48))
-	)
-	(port
-		(pt 96 64)
-		(output)
-		(text "Q2" (rect 0 0 16 14)(font "Arial" (font_size 8)))
-		(text "Q2" (rect 59 59 75 73)(font "Arial" (font_size 8)))
-		(line (pt 96 64)(pt 80 64))
-	)
-	(drawing
-		(rectangle (rect 16 16 80 80))
-	)
-)
-(symbol
 	(rect 264 264 440 344)
 	(text "counter" (rect 5 0 41 12)(font "Arial" ))
 	(text "inst" (rect 8 64 25 76)(font "Arial" ))
@@ -702,17 +616,27 @@ applicable agreement for further details.
 		(circle (rect 31 12 39 20))
 	)
 )
-(connector
-	(pt 816 352)
-	(pt 792 352)
-)
-(connector
-	(pt 816 368)
-	(pt 792 368)
-)
-(connector
-	(pt 816 384)
-	(pt 792 384)
+(symbol
+	(rect 528 280 680 360)
+	(text "subtractor" (rect 5 0 54 12)(font "Arial" ))
+	(text "inst2" (rect 8 64 31 76)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "clk" (rect 0 0 14 12)(font "Arial" ))
+		(text "clk" (rect 21 27 35 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 152 32)
+		(output)
+		(text "count[2..0]" (rect 0 0 53 12)(font "Arial" ))
+		(text "count[2..0]" (rect 87 27 140 39)(font "Arial" ))
+		(line (pt 152 32)(pt 136 32)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 136 64))
+	)
 )
 (connector
 	(pt 936 352)
@@ -729,27 +653,6 @@ applicable agreement for further details.
 (connector
 	(pt 936 400)
 	(pt 912 400)
-)
-(connector
-	(text "out_pos[15]" (rect 482 336 539 348)(font "Arial" ))
-	(pt 536 352)
-	(pt 472 352)
-)
-(connector
-	(text "out_pos[15..0]" (rect 448 298 460 368)(font "Arial" )(vertical))
-	(pt 472 296)
-	(pt 472 352)
-	(bus)
-)
-(connector
-	(pt 472 352)
-	(pt 472 376)
-	(bus)
-)
-(connector
-	(pt 440 296)
-	(pt 472 296)
-	(bus)
 )
 (connector
 	(pt 264 296)
@@ -868,54 +771,6 @@ applicable agreement for further details.
 	(pt 1208 544)
 )
 (connector
-	(pt 648 384)
-	(pt 648 280)
-)
-(connector
-	(pt 664 368)
-	(pt 664 296)
-)
-(connector
-	(pt 680 352)
-	(pt 680 312)
-)
-(connector
-	(pt 632 384)
-	(pt 648 384)
-)
-(connector
-	(pt 648 384)
-	(pt 696 384)
-)
-(connector
-	(pt 632 368)
-	(pt 664 368)
-)
-(connector
-	(pt 664 368)
-	(pt 696 368)
-)
-(connector
-	(pt 632 352)
-	(pt 680 352)
-)
-(connector
-	(pt 680 352)
-	(pt 696 352)
-)
-(connector
-	(pt 664 296)
-	(pt 1208 296)
-)
-(connector
-	(pt 648 280)
-	(pt 1208 280)
-)
-(connector
-	(pt 680 312)
-	(pt 1208 312)
-)
-(connector
 	(pt 1184 216)
 	(pt 1208 216)
 )
@@ -939,8 +794,119 @@ applicable agreement for further details.
 	(pt 1184 232)
 	(pt 1184 248)
 )
-(junction (pt 648 384))
-(junction (pt 664 368))
-(junction (pt 680 352))
-(junction (pt 472 352))
+(connector
+	(text "out_pos[15]" (rect 474 296 531 308)(font "Arial" ))
+	(pt 472 312)
+	(pt 528 312)
+)
+(connector
+	(pt 440 296)
+	(pt 464 296)
+	(bus)
+)
+(connector
+	(pt 464 312)
+	(pt 472 312)
+	(bus)
+)
+(connector
+	(pt 464 296)
+	(pt 464 312)
+	(bus)
+)
+(connector
+	(text "out_pos[15..0]" (rect 440 298 452 368)(font "Arial" )(vertical))
+	(pt 464 312)
+	(pt 464 376)
+	(bus)
+)
+(connector
+	(pt 752 280)
+	(pt 752 384)
+)
+(connector
+	(pt 768 296)
+	(pt 768 368)
+)
+(connector
+	(pt 784 312)
+	(pt 784 352)
+)
+(connector
+	(pt 1208 296)
+	(pt 768 296)
+)
+(connector
+	(pt 1208 280)
+	(pt 752 280)
+)
+(connector
+	(pt 1208 312)
+	(pt 784 312)
+)
+(connector
+	(pt 784 352)
+	(pt 816 352)
+)
+(connector
+	(pt 768 368)
+	(pt 816 368)
+)
+(connector
+	(pt 752 384)
+	(pt 816 384)
+)
+(connector
+	(text "count[0]" (rect 714 336 754 348)(font "Arial" ))
+	(pt 712 352)
+	(pt 784 352)
+)
+(connector
+	(text "count[1]" (rect 714 352 754 364)(font "Arial" ))
+	(pt 704 368)
+	(pt 768 368)
+)
+(connector
+	(pt 680 312)
+	(pt 704 312)
+	(bus)
+)
+(connector
+	(pt 704 352)
+	(pt 712 352)
+	(bus)
+)
+(connector
+	(pt 704 312)
+	(pt 704 352)
+	(bus)
+)
+(connector
+	(text "count[2]" (rect 714 368 754 380)(font "Arial" ))
+	(pt 704 384)
+	(pt 752 384)
+)
+(connector
+	(pt 704 352)
+	(pt 704 368)
+	(bus)
+)
+(connector
+	(text "count[2..0]" (rect 680 313 692 366)(font "Arial" )(vertical))
+	(pt 704 368)
+	(pt 704 384)
+	(bus)
+)
+(connector
+	(pt 704 384)
+	(pt 704 400)
+	(bus)
+)
 (junction (pt 1184 232))
+(junction (pt 464 312))
+(junction (pt 784 352))
+(junction (pt 768 368))
+(junction (pt 752 384))
+(junction (pt 704 368))
+(junction (pt 704 352))
+(junction (pt 704 384))

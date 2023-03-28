@@ -1,5 +1,5 @@
 Analysis & Synthesis report for DZ1
-Tue Mar 28 10:16:32 2023
+Tue Mar 28 19:41:32 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
 
 
@@ -14,9 +14,10 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Ver
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
-  9. Elapsed Time Per Partition
- 10. Analysis & Synthesis Messages
- 11. Analysis & Synthesis Suppressed Messages
+  9. Inverted Register Statistics
+ 10. Elapsed Time Per Partition
+ 11. Analysis & Synthesis Messages
+ 12. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -42,7 +43,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                          ;
 +------------------------------------+--------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Mar 28 10:16:32 2023            ;
+; Analysis & Synthesis Status        ; Successful - Tue Mar 28 19:41:32 2023            ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version ;
 ; Revision Name                      ; DZ1                                              ;
 ; Top-level Entity Name              ; main                                             ;
@@ -155,34 +156,33 @@ applicable agreement for further details.
 ; Maximum allowed            ; 2           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
+; Maximum used               ; 2           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ;   0.0%      ;
+;     Processor 2            ; < 0.1%      ;
+;     Processors 3-4         ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                  ;
-+----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                                        ; Library ;
-+----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------------------------------------+---------+
-; count_down.bdf                   ; yes             ; User Block Diagram/Schematic File  ; C:/Users/xyarc/YandexDisk/Byz/Digital devices and microprocessors/DZ1/Quartus/count_down.bdf        ;         ;
-; main.bdf                         ; yes             ; User Block Diagram/Schematic File  ; C:/Users/xyarc/YandexDisk/Byz/Digital devices and microprocessors/DZ1/Quartus/main.bdf              ;         ;
-; b_schema.bdf                     ; yes             ; User Block Diagram/Schematic File  ; C:/Users/xyarc/YandexDisk/Byz/Digital devices and microprocessors/DZ1/Quartus/b_schema.bdf          ;         ;
-; a_schema.bdf                     ; yes             ; User Block Diagram/Schematic File  ; C:/Users/xyarc/YandexDisk/Byz/Digital devices and microprocessors/DZ1/Quartus/a_schema.bdf          ;         ;
-; c_schema.bdf                     ; yes             ; User Block Diagram/Schematic File  ; C:/Users/xyarc/YandexDisk/Byz/Digital devices and microprocessors/DZ1/Quartus/c_schema.bdf          ;         ;
-; d_schema.bdf                     ; yes             ; User Block Diagram/Schematic File  ; C:/Users/xyarc/YandexDisk/Byz/Digital devices and microprocessors/DZ1/Quartus/d_schema.bdf          ;         ;
-; e_schema.bdf                     ; yes             ; User Block Diagram/Schematic File  ; C:/Users/xyarc/YandexDisk/Byz/Digital devices and microprocessors/DZ1/Quartus/e_schema.bdf          ;         ;
-; f_schema.bdf                     ; yes             ; User Block Diagram/Schematic File  ; C:/Users/xyarc/YandexDisk/Byz/Digital devices and microprocessors/DZ1/Quartus/f_schema.bdf          ;         ;
-; g_schema.bdf                     ; yes             ; User Block Diagram/Schematic File  ; C:/Users/xyarc/YandexDisk/Byz/Digital devices and microprocessors/DZ1/Quartus/g_schema.bdf          ;         ;
-; BCD_schema.bdf                   ; yes             ; User Block Diagram/Schematic File  ; C:/Users/xyarc/YandexDisk/Byz/Digital devices and microprocessors/DZ1/Quartus/BCD_schema.bdf        ;         ;
-; recoder_schema.bdf               ; yes             ; User Block Diagram/Schematic File  ; C:/Users/xyarc/YandexDisk/Byz/Digital devices and microprocessors/DZ1/Quartus/recoder_schema.bdf    ;         ;
-; inputCounter.v                   ; yes             ; User Verilog HDL File              ; C:/Users/xyarc/YandexDisk/Byz/Digital devices and microprocessors/DZ1/Quartus/inputCounter.v        ;         ;
-; counter3Bit.v                    ; yes             ; User Verilog HDL File              ; C:/Users/xyarc/YandexDisk/Byz/Digital devices and microprocessors/DZ1/Quartus/counter3Bit.v         ;         ;
-; counter3Bit_reset.bdf            ; yes             ; User Block Diagram/Schematic File  ; C:/Users/xyarc/YandexDisk/Byz/Digital devices and microprocessors/DZ1/Quartus/counter3Bit_reset.bdf ;         ;
-+----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------------------------------------+---------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                               ;
++----------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                                     ; Library ;
++----------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------------------------------+---------+
+; Subtractor.v                     ; yes             ; User Verilog HDL File              ; C:/Users/xyarc/YandexDisk/Byz/Digital devices and microprocessors/DZ1/Quartus/Subtractor.v       ;         ;
+; main.bdf                         ; yes             ; User Block Diagram/Schematic File  ; C:/Users/xyarc/YandexDisk/Byz/Digital devices and microprocessors/DZ1/Quartus/main.bdf           ;         ;
+; b_schema.bdf                     ; yes             ; User Block Diagram/Schematic File  ; C:/Users/xyarc/YandexDisk/Byz/Digital devices and microprocessors/DZ1/Quartus/b_schema.bdf       ;         ;
+; a_schema.bdf                     ; yes             ; User Block Diagram/Schematic File  ; C:/Users/xyarc/YandexDisk/Byz/Digital devices and microprocessors/DZ1/Quartus/a_schema.bdf       ;         ;
+; c_schema.bdf                     ; yes             ; User Block Diagram/Schematic File  ; C:/Users/xyarc/YandexDisk/Byz/Digital devices and microprocessors/DZ1/Quartus/c_schema.bdf       ;         ;
+; d_schema.bdf                     ; yes             ; User Block Diagram/Schematic File  ; C:/Users/xyarc/YandexDisk/Byz/Digital devices and microprocessors/DZ1/Quartus/d_schema.bdf       ;         ;
+; e_schema.bdf                     ; yes             ; User Block Diagram/Schematic File  ; C:/Users/xyarc/YandexDisk/Byz/Digital devices and microprocessors/DZ1/Quartus/e_schema.bdf       ;         ;
+; f_schema.bdf                     ; yes             ; User Block Diagram/Schematic File  ; C:/Users/xyarc/YandexDisk/Byz/Digital devices and microprocessors/DZ1/Quartus/f_schema.bdf       ;         ;
+; g_schema.bdf                     ; yes             ; User Block Diagram/Schematic File  ; C:/Users/xyarc/YandexDisk/Byz/Digital devices and microprocessors/DZ1/Quartus/g_schema.bdf       ;         ;
+; BCD_schema.bdf                   ; yes             ; User Block Diagram/Schematic File  ; C:/Users/xyarc/YandexDisk/Byz/Digital devices and microprocessors/DZ1/Quartus/BCD_schema.bdf     ;         ;
+; recoder_schema.bdf               ; yes             ; User Block Diagram/Schematic File  ; C:/Users/xyarc/YandexDisk/Byz/Digital devices and microprocessors/DZ1/Quartus/recoder_schema.bdf ;         ;
+; inputCounter.v                   ; yes             ; User Verilog HDL File              ; C:/Users/xyarc/YandexDisk/Byz/Digital devices and microprocessors/DZ1/Quartus/inputCounter.v     ;         ;
++----------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------------------------------+---------+
 
 
 +---------------------------------------------------------+
@@ -215,22 +215,22 @@ applicable agreement for further details.
 +---------------------------------------------+-----------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                      ;
-+------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------+--------------+
-; Compilation Hierarchy Node   ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                            ; Library Name ;
-+------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------+--------------+
-; |main                        ; 26 (0)            ; 19 (0)       ; 0           ; 0            ; 0       ; 0         ; 13   ; 0            ; |main                                          ; work         ;
-;    |BCD_schema:inst6|        ; 6 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|BCD_schema:inst6                         ; work         ;
-;       |a_schema:A_A|         ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|BCD_schema:inst6|a_schema:A_A            ; work         ;
-;       |b_schema:B_B|         ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|BCD_schema:inst6|b_schema:B_B            ; work         ;
-;       |c_schema:C_C|         ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|BCD_schema:inst6|c_schema:C_C            ; work         ;
-;       |d_schema:D_D|         ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|BCD_schema:inst6|d_schema:D_D            ; work         ;
-;    |count_down:inst10|       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|count_down:inst10                        ; work         ;
-;    |counter3Bit_reset:inst2| ; 3 (0)             ; 3 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|counter3Bit_reset:inst2                  ; work         ;
-;       |counter3bit:inst|     ; 3 (3)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|counter3Bit_reset:inst2|counter3bit:inst ; work         ;
-;    |counter:inst|            ; 16 (16)           ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|counter:inst                             ; work         ;
-+------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------+--------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                 ; Library Name ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------+--------------+
+; |main                      ; 26 (0)            ; 19 (0)       ; 0           ; 0            ; 0       ; 0         ; 13   ; 0            ; |main                               ; work         ;
+;    |BCD_schema:inst6|      ; 6 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|BCD_schema:inst6              ; work         ;
+;       |a_schema:A_A|       ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|BCD_schema:inst6|a_schema:A_A ; work         ;
+;       |b_schema:B_B|       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|BCD_schema:inst6|b_schema:B_B ; work         ;
+;       |c_schema:C_C|       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|BCD_schema:inst6|c_schema:C_C ; work         ;
+;       |d_schema:D_D|       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|BCD_schema:inst6|d_schema:D_D ; work         ;
+;       |g_schema:G_G|       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|BCD_schema:inst6|g_schema:G_G ; work         ;
+;    |counter:inst|          ; 16 (16)           ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|counter:inst                  ; work         ;
+;    |recoder_schema:inst1|  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|recoder_schema:inst1          ; work         ;
+;    |subtractor:inst2|      ; 3 (3)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|subtractor:inst2              ; work         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -249,6 +249,17 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 
 
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; subtractor:inst2|count[2]              ; 10      ;
+; subtractor:inst2|count[0]              ; 10      ;
+; Total number of inverted registers = 2 ;         ;
++----------------------------------------+---------+
+
+
 +-------------------------------+
 ; Elapsed Time Per Partition    ;
 +----------------+--------------+
@@ -264,11 +275,11 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
-    Info: Processing started: Tue Mar 28 10:16:30 2023
+    Info: Processing started: Tue Mar 28 19:41:30 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DZ1 -c DZ1
 Info (11104): Parallel Compilation has detected 4 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 2 of the 2 physical processors detected instead.
-Info (12021): Found 1 design units, including 1 entities, in source file count_down.bdf
-    Info (12023): Found entity 1: count_down
+Info (12021): Found 1 design units, including 1 entities, in source file subtractor.v
+    Info (12023): Found entity 1: subtractor
 Info (12021): Found 1 design units, including 1 entities, in source file main.bdf
     Info (12023): Found entity 1: main
 Info (12021): Found 1 design units, including 1 entities, in source file b_schema.bdf
@@ -291,10 +302,6 @@ Info (12021): Found 1 design units, including 1 entities, in source file recoder
     Info (12023): Found entity 1: recoder_schema
 Info (12021): Found 1 design units, including 1 entities, in source file inputcounter.v
     Info (12023): Found entity 1: counter
-Info (12021): Found 1 design units, including 1 entities, in source file counter3bit.v
-    Info (12023): Found entity 1: counter3bit
-Info (12021): Found 1 design units, including 1 entities, in source file counter3bit_reset.bdf
-    Info (12023): Found entity 1: counter3Bit_reset
 Info (12127): Elaborating entity "main" for the top level hierarchy
 Info (12128): Elaborating entity "BCD_schema" for hierarchy "BCD_schema:inst6"
 Info (12128): Elaborating entity "a_schema" for hierarchy "BCD_schema:inst6|a_schema:A_A"
@@ -305,9 +312,8 @@ Info (12128): Elaborating entity "e_schema" for hierarchy "BCD_schema:inst6|e_sc
 Info (12128): Elaborating entity "f_schema" for hierarchy "BCD_schema:inst6|f_schema:F_F"
 Info (12128): Elaborating entity "g_schema" for hierarchy "BCD_schema:inst6|g_schema:G_G"
 Info (12128): Elaborating entity "recoder_schema" for hierarchy "recoder_schema:inst1"
-Info (12128): Elaborating entity "count_down" for hierarchy "count_down:inst10"
-Info (12128): Elaborating entity "counter3Bit_reset" for hierarchy "counter3Bit_reset:inst2"
-Info (12128): Elaborating entity "counter3bit" for hierarchy "counter3Bit_reset:inst2|counter3bit:inst"
+Info (12128): Elaborating entity "subtractor" for hierarchy "subtractor:inst2"
+Warning (10230): Verilog HDL assignment warning at Subtractor.v(19): truncated value with size 32 to match size of target (3)
 Info (12128): Elaborating entity "counter" for hierarchy "counter:inst"
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "U2_138_select" is stuck at VCC
@@ -320,10 +326,10 @@ Info (21057): Implemented 39 device resources after synthesis - the final resour
     Info (21058): Implemented 1 input pins
     Info (21059): Implemented 12 output pins
     Info (21061): Implemented 26 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 3 warnings
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 4 warnings
     Info: Peak virtual memory: 4582 megabytes
-    Info: Processing ended: Tue Mar 28 10:16:32 2023
-    Info: Elapsed time: 00:00:02
+    Info: Processing ended: Tue Mar 28 19:41:33 2023
+    Info: Elapsed time: 00:00:03
     Info: Total CPU time (on all processors): 00:00:02
 
 
