@@ -1,0 +1,10 @@
+I/O Assignment Analysis Status : Successful - Tue Mar 28 10:24:14 2023
+Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version
+Revision Name : DZ1
+Top-level Entity Name : main
+Family : Cyclone IV E
+Device : EP4CE6F17C8
+Timing Models : Final
+Total pins : 13 / 180 ( 7 % )
+Total virtual pins : 0
+Total PLLs : 0 / 2 ( 0 % )
