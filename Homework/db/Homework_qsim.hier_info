@@ -1,8 +1,8 @@
 |main
-A0 <= Subtractor:inst.Q0
-clk => Freq_divider:inst4.clk
-A1 <= Subtractor:inst.Q1
-A2 <= Subtractor:inst.Q2
+A0 <= CNT:inst.Q0
+clk => CNT:inst.C
+A1 <= CNT:inst.Q1
+A2 <= CNT:inst.Q2
 U2_138_select <= <VCC>
 U3_138_select <= <VCC>
 LED-A <= inst5.DB_MAX_OUTPUT_PORT_TYPE
@@ -14,63 +14,21 @@ LED-F <= inst10.DB_MAX_OUTPUT_PORT_TYPE
 LED-G <= inst11.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|main|Subtractor:inst
-Q0 <= out[0].DB_MAX_OUTPUT_PORT_TYPE
-clk_subtractor => subtractor_v:inst.clk
-Q1 <= out[1].DB_MAX_OUTPUT_PORT_TYPE
-Q2 <= out[2].DB_MAX_OUTPUT_PORT_TYPE
+|main|CNT:inst
+Q0 <= CNT_without_R:inst.Q0
+C => CNT_without_R:inst.C
+Q1 <= CNT_without_R:inst.Q1
+Q2 <= CNT_without_R:inst.Q2
 
 
-|main|Subtractor:inst|subtractor_v:inst
-clk => count[0]~reg0.CLK
-clk => count[1]~reg0.CLK
-clk => count[2]~reg0.CLK
-count[0] <= count[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-count[1] <= count[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-count[2] <= count[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|main|Freq_divider:inst4
-clk => out_pos[0]~reg0.CLK
-clk => out_pos[1]~reg0.CLK
-clk => out_pos[2]~reg0.CLK
-clk => out_pos[3]~reg0.CLK
-clk => out_pos[4]~reg0.CLK
-clk => out_pos[5]~reg0.CLK
-clk => out_pos[6]~reg0.CLK
-clk => out_pos[7]~reg0.CLK
-clk => out_pos[8]~reg0.CLK
-clk => out_pos[9]~reg0.CLK
-clk => out_pos[10]~reg0.CLK
-clk => out_pos[11]~reg0.CLK
-clk => out_pos[12]~reg0.CLK
-clk => out_pos[13]~reg0.CLK
-clk => out_pos[14]~reg0.CLK
-clk => out_pos[15]~reg0.CLK
-clk => out_pos[16]~reg0.CLK
-clk => out_pos[17]~reg0.CLK
-clk => out_pos[18]~reg0.CLK
-clk => out_pos[19]~reg0.CLK
-out_pos[0] <= out_pos[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-out_pos[1] <= out_pos[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-out_pos[2] <= out_pos[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-out_pos[3] <= out_pos[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-out_pos[4] <= out_pos[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-out_pos[5] <= out_pos[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-out_pos[6] <= out_pos[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-out_pos[7] <= out_pos[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-out_pos[8] <= out_pos[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-out_pos[9] <= out_pos[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-out_pos[10] <= out_pos[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-out_pos[11] <= out_pos[11]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-out_pos[12] <= out_pos[12]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-out_pos[13] <= out_pos[13]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-out_pos[14] <= out_pos[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-out_pos[15] <= out_pos[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-out_pos[16] <= out_pos[16]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-out_pos[17] <= out_pos[17]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-out_pos[18] <= out_pos[18]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-out_pos[19] <= out_pos[19]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+|main|CNT:inst|CNT_without_R:inst
+Q2 <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+R => inst6.ACLR
+R => inst4.ACLR
+R => inst.ACLR
+C => inst14.IN0
+Q1 <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+Q0 <= inst.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |main|BCD:inst13
@@ -213,19 +171,40 @@ x0 => inst1.IN0
 x0 => inst1.IN1
 
 
-|main|Code_converter:inst1
-y0 <= <GND>
-y1 <= inst6.DB_MAX_OUTPUT_PORT_TYPE
-x2 => inst3.IN0
-x2 => inst3.IN1
-x2 => inst9.IN0
+|main|recoder_schema:inst3
+y0 <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+Q2 => inst14.IN0
+Q2 => inst6.IN0
+Q2 => inst15.IN0
+Q2 => inst9.IN0
+Q2 => inst9.IN1
+Q1 => inst8.IN0
+Q1 => inst8.IN1
+Q1 => inst20.IN0
+Q0 => inst12.IN1
+Q0 => inst7.IN0
+Q0 => inst7.IN1
+Q0 => inst15.IN1
+Q0 => inst97.IN0
+y1 <= inst18.DB_MAX_OUTPUT_PORT_TYPE
+y2 <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+y3 <= inst22.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|count_down:inst12
+y1 <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+x0 => inst8.IN0
 x0 => inst1.IN0
 x0 => inst1.IN1
-x0 => inst7.IN0
-x1 => ints2.IN0
-x1 => ints2.IN1
-x1 => inst10.IN0
-y2 <= inst13.DB_MAX_OUTPUT_PORT_TYPE
-y3 <= inst14.DB_MAX_OUTPUT_PORT_TYPE
+x0 => inst11.IN0
+x1 => inst8.IN1
+x1 => inst5.IN1
+x1 => inst2.IN0
+x1 => inst2.IN1
+x2 => inst3.IN0
+x2 => inst3.IN1
+x2 => inst6.IN2
+y0 <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+y2 <= inst10.DB_MAX_OUTPUT_PORT_TYPE
 
 

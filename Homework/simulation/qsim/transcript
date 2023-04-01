@@ -10,5 +10,5 @@
 # -- Compiling module main_vlg_sample_tst
 # -- Compiling module main_vlg_check_tst
 # ** Error: Homework.vt(61): near "-": syntax error, unexpected '-', expecting ')'
-# ** Error: d:/altera/13.0sp1/modelsim_ase/win32aloem/vlog failed.
+# ** Error: c:/altera/13.0sp1/modelsim_ase/win32aloem/vlog failed.
 # Executing ONERROR command at macro ./Homework.do line 4
