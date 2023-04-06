@@ -1,7 +1,7 @@
-module counter(clk, reset, out_pos);
+module inputCounter(clk, reset, out_pos);
 	input clk;
 	input reset;
-	output reg [15:0]out_pos;
+	output reg [24:0]out_pos;
 	
 	always @(posedge clk)
 	begin

@@ -1,6 +1,6 @@
 |main
 LED-A <= inst7.DB_MAX_OUTPUT_PORT_TYPE
-clk => counter:inst.clk
+clk => inputCounter:inst.clk
 LED-B <= inst8.DB_MAX_OUTPUT_PORT_TYPE
 LED-C <= inst11.DB_MAX_OUTPUT_PORT_TYPE
 LED-D <= inst12.DB_MAX_OUTPUT_PORT_TYPE
@@ -207,7 +207,7 @@ out_pos[1] <= out_pos[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 out_pos[2] <= out_pos[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|main|counter:inst
+|main|inputCounter:inst
 clk => out_pos[0]~reg0.CLK
 clk => out_pos[1]~reg0.CLK
 clk => out_pos[2]~reg0.CLK
@@ -224,6 +224,24 @@ clk => out_pos[12]~reg0.CLK
 clk => out_pos[13]~reg0.CLK
 clk => out_pos[14]~reg0.CLK
 clk => out_pos[15]~reg0.CLK
+clk => out_pos[16]~reg0.CLK
+clk => out_pos[17]~reg0.CLK
+clk => out_pos[18]~reg0.CLK
+clk => out_pos[19]~reg0.CLK
+clk => out_pos[20]~reg0.CLK
+clk => out_pos[21]~reg0.CLK
+clk => out_pos[22]~reg0.CLK
+clk => out_pos[23]~reg0.CLK
+clk => out_pos[24]~reg0.CLK
+reset => out_pos.OUTPUTSELECT
+reset => out_pos.OUTPUTSELECT
+reset => out_pos.OUTPUTSELECT
+reset => out_pos.OUTPUTSELECT
+reset => out_pos.OUTPUTSELECT
+reset => out_pos.OUTPUTSELECT
+reset => out_pos.OUTPUTSELECT
+reset => out_pos.OUTPUTSELECT
+reset => out_pos.OUTPUTSELECT
 reset => out_pos.OUTPUTSELECT
 reset => out_pos.OUTPUTSELECT
 reset => out_pos.OUTPUTSELECT
@@ -256,5 +274,14 @@ out_pos[12] <= out_pos[12]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 out_pos[13] <= out_pos[13]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 out_pos[14] <= out_pos[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 out_pos[15] <= out_pos[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out_pos[16] <= out_pos[16]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out_pos[17] <= out_pos[17]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out_pos[18] <= out_pos[18]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out_pos[19] <= out_pos[19]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out_pos[20] <= out_pos[20]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out_pos[21] <= out_pos[21]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out_pos[22] <= out_pos[22]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out_pos[23] <= out_pos[23]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out_pos[24] <= out_pos[24]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 

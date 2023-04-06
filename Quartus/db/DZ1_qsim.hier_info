@@ -1,4 +1,4 @@
-|main
+|main_copy
 LED-A <= BCD_schema:inst6.a
 clk => counter3Bit_reset:inst2.clk
 LED-B <= BCD_schema:inst6.b
@@ -14,7 +14,7 @@ U2_138_select <= <VCC>
 U3_138_select <= <VCC>
 
 
-|main|BCD_schema:inst6
+|main_copy|BCD_schema:inst6
 a <= a_schema:A_A.y_a
 x0 => a_schema:A_A.x0
 x0 => b_schema:B_B.x0
@@ -52,7 +52,7 @@ f <= f_schema:F_F.y_f
 g <= g_schema:G_G.y_g
 
 
-|main|BCD_schema:inst6|a_schema:A_A
+|main_copy|BCD_schema:inst6|a_schema:A_A
 y_a <= NAND_20.DB_MAX_OUTPUT_PORT_TYPE
 x3 => NAND_1.IN0
 x3 => NAND_1.IN1
@@ -68,7 +68,7 @@ x1 => NAND_6.IN1
 x1 => NAND_4.IN1
 
 
-|main|BCD_schema:inst6|b_schema:B_B
+|main_copy|BCD_schema:inst6|b_schema:B_B
 y_b <= NAND_16.DB_MAX_OUTPUT_PORT_TYPE
 x3 => NAND_2.IN0
 x3 => NAND_2.IN1
@@ -82,7 +82,7 @@ x1 => NAND_10.IN1
 x1 => NAND_5.IN0
 
 
-|main|BCD_schema:inst6|c_schema:C_C
+|main_copy|BCD_schema:inst6|c_schema:C_C
 y_c <= NAND_9.DB_MAX_OUTPUT_PORT_TYPE
 x3 => NAND_1.IN0
 x3 => NAND_1.IN1
@@ -94,7 +94,7 @@ x1 => NAND_2.IN0
 x1 => NAND_2.IN1
 
 
-|main|BCD_schema:inst6|d_schema:D_D
+|main_copy|BCD_schema:inst6|d_schema:D_D
 y_d <= NAND_32.DB_MAX_OUTPUT_PORT_TYPE
 x3 => NAND_12.IN0
 x3 => NAND_12.IN1
@@ -111,7 +111,7 @@ x0 => NAND_13.IN0
 x0 => NAND_13.IN1
 
 
-|main|BCD_schema:inst6|e_schema:E_E
+|main_copy|BCD_schema:inst6|e_schema:E_E
 y_e <= NAND_35.DB_MAX_OUTPUT_PORT_TYPE
 x3 => NAND_38.IN0
 x3 => NAND_38.IN1
@@ -122,7 +122,7 @@ x2 => NAND_39.IN0
 x2 => NAND_39.IN1
 
 
-|main|BCD_schema:inst6|f_schema:F_F
+|main_copy|BCD_schema:inst6|f_schema:F_F
 y_f <= NAND_52.DB_MAX_OUTPUT_PORT_TYPE
 x3 => NAND_45.IN0
 x3 => NAND_45.IN1
@@ -134,7 +134,7 @@ x1 => NAND_38.IN1
 x1 => NAND_39.IN0
 
 
-|main|BCD_schema:inst6|g_schema:G_G
+|main_copy|BCD_schema:inst6|g_schema:G_G
 y_g <= NAND_64.DB_MAX_OUTPUT_PORT_TYPE
 x3 => not_x_three.IN0
 x3 => not_x_three.IN1
@@ -151,7 +151,7 @@ x0 => not_x_zero.IN0
 x0 => not_x_zero.IN1
 
 
-|main|recoder_schema:inst1
+|main_copy|recoder_schema:inst1
 y0 <= inst10.DB_MAX_OUTPUT_PORT_TYPE
 Q2 => inst14.IN0
 Q2 => inst6.IN0
@@ -171,7 +171,7 @@ y2 <= inst10.DB_MAX_OUTPUT_PORT_TYPE
 y3 <= inst22.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|main|count_down:inst10
+|main_copy|count_down:inst10
 y1 <= inst9.DB_MAX_OUTPUT_PORT_TYPE
 x0 => inst8.IN0
 x0 => inst1.IN0
@@ -188,14 +188,14 @@ y0 <= inst7.DB_MAX_OUTPUT_PORT_TYPE
 y2 <= inst10.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|main|counter3Bit_reset:inst2
+|main_copy|counter3Bit_reset:inst2
 Q0 <= out_pos[0].DB_MAX_OUTPUT_PORT_TYPE
 clk => counter3bit:inst.clk
 Q1 <= out_pos[1].DB_MAX_OUTPUT_PORT_TYPE
 Q2 <= out_pos[2].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|main|counter3Bit_reset:inst2|counter3bit:inst
+|main_copy|counter3Bit_reset:inst2|counter3bit:inst
 clk => out_pos[0]~reg0.CLK
 clk => out_pos[1]~reg0.CLK
 clk => out_pos[2]~reg0.CLK

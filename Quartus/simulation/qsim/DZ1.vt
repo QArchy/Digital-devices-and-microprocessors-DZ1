@@ -18,15 +18,15 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "03/28/2023 10:04:48"
+// Generated on "04/06/2023 18:14:10"
                                                                         
-// Verilog Self-Checking Test Bench (with test vectors) for design :    main
+// Verilog Self-Checking Test Bench (with test vectors) for design :    main_copy
 // 
 // Simulation tool : 3rd Party
 // 
 
 `timescale 1 ps/ 1 ps
-module main_vlg_sample_tst(
+module main_copy_vlg_sample_tst(
 	clk,
 	sampler_tx
 );
@@ -54,7 +54,7 @@ end
 assign sampler_tx = sample;
 endmodule
 
-module main_vlg_check_tst (
+module main_copy_vlg_check_tst (
 	A0,
 	A1,
 	A2,
@@ -402,7 +402,7 @@ $finish;
 end 
 endmodule
 
-module main_vlg_vec_tst();
+module main_copy_vlg_vec_tst();
 // constants                                           
 // general purpose registers
 reg clk;
@@ -423,7 +423,7 @@ wire U3_138_select;
 wire sampler;                             
 
 // assign statements (if any)                          
-main i1 (
+main_copy i1 (
 // port map - connection between master ports and signals/registers   
 	.A0(A0),
 	.A1(A1),
@@ -448,12 +448,12 @@ begin
 	#10000;
 end 
 
-main_vlg_sample_tst tb_sample (
+main_copy_vlg_sample_tst tb_sample (
 	.clk(clk),
 	.sampler_tx(sampler)
 );
 
-main_vlg_check_tst tb_out(
+main_copy_vlg_check_tst tb_out(
 	.A0(A0),
 	.A1(A1),
 	.A2(A2),

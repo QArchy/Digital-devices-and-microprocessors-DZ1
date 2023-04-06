@@ -1,5 +1,5 @@
 Analysis & Synthesis report for DZ1
-Thu Apr 06 17:10:06 2023
+Thu Apr 06 18:46:57 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
 
 
@@ -13,10 +13,11 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Ver
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Elapsed Time Per Partition
- 10. Analysis & Synthesis Messages
- 11. Analysis & Synthesis Suppressed Messages
+  8. Registers Removed During Synthesis
+  9. General Register Statistics
+ 10. Elapsed Time Per Partition
+ 11. Analysis & Synthesis Messages
+ 12. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -42,7 +43,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                          ;
 +------------------------------------+--------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Apr 06 17:10:05 2023            ;
+; Analysis & Synthesis Status        ; Successful - Thu Apr 06 18:46:57 2023            ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version ;
 ; Revision Name                      ; DZ1                                              ;
 ; Top-level Entity Name              ; main                                             ;
@@ -229,9 +230,19 @@ applicable agreement for further details.
 ;    |count_down:inst10|       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|count_down:inst10                        ; work         ;
 ;    |counter3Bit_reset:inst2| ; 3 (0)             ; 3 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|counter3Bit_reset:inst2                  ; work         ;
 ;       |counter3bit:inst|     ; 3 (3)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|counter3Bit_reset:inst2|counter3bit:inst ; work         ;
-;    |counter:inst|            ; 16 (16)           ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|counter:inst                             ; work         ;
+;    |inputCounter:inst|       ; 16 (16)           ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main|inputCounter:inst                        ; work         ;
 +------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------------+
+; Registers Removed During Synthesis                         ;
++---------------------------------------+--------------------+
+; Register name                         ; Reason for Removal ;
++---------------------------------------+--------------------+
+; inputCounter:inst|out_pos[16..24]     ; Lost fanout        ;
+; Total Number of Removed Registers = 9 ;                    ;
++---------------------------------------+--------------------+
 
 
 +------------------------------------------------------+
@@ -264,9 +275,11 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
-    Info: Processing started: Thu Apr 06 17:10:03 2023
+    Info: Processing started: Thu Apr 06 18:46:54 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DZ1 -c DZ1
 Info (11104): Parallel Compilation has detected 4 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 2 of the 2 physical processors detected instead.
+Info (12021): Found 1 design units, including 1 entities, in source file main_copy.bdf
+    Info (12023): Found entity 1: main_copy
 Info (12021): Found 1 design units, including 1 entities, in source file count_down.bdf
     Info (12023): Found entity 1: count_down
 Info (12021): Found 1 design units, including 1 entities, in source file main.bdf
@@ -290,7 +303,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file bcd_sch
 Info (12021): Found 1 design units, including 1 entities, in source file recoder_schema.bdf
     Info (12023): Found entity 1: recoder_schema
 Info (12021): Found 1 design units, including 1 entities, in source file inputcounter.v
-    Info (12023): Found entity 1: counter
+    Info (12023): Found entity 1: inputCounter
 Info (12021): Found 1 design units, including 1 entities, in source file counter3bit.v
     Info (12023): Found entity 1: counter3bit
 Info (12021): Found 1 design units, including 1 entities, in source file counter3bit_reset.bdf
@@ -308,11 +321,12 @@ Info (12128): Elaborating entity "recoder_schema" for hierarchy "recoder_schema:
 Info (12128): Elaborating entity "count_down" for hierarchy "count_down:inst10"
 Info (12128): Elaborating entity "counter3Bit_reset" for hierarchy "counter3Bit_reset:inst2"
 Info (12128): Elaborating entity "counter3bit" for hierarchy "counter3Bit_reset:inst2|counter3bit:inst"
-Info (12128): Elaborating entity "counter" for hierarchy "counter:inst"
+Info (12128): Elaborating entity "inputCounter" for hierarchy "inputCounter:inst"
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "U2_138_select" is stuck at VCC
     Warning (13410): Pin "U3_138_select" is stuck at VCC
 Info (286030): Timing-Driven Synthesis is running
+Info (17049): 9 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file C:/Users/xyarc/YandexDisk/Byz/Digital devices and microprocessors/DZ1/Quartus/output_files/DZ1.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
@@ -322,9 +336,9 @@ Info (21057): Implemented 39 device resources after synthesis - the final resour
     Info (21061): Implemented 26 logic cells
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 3 warnings
     Info: Peak virtual memory: 4582 megabytes
-    Info: Processing ended: Thu Apr 06 17:10:06 2023
+    Info: Processing ended: Thu Apr 06 18:46:57 2023
     Info: Elapsed time: 00:00:03
-    Info: Total CPU time (on all processors): 00:00:02
+    Info: Total CPU time (on all processors): 00:00:03
 
 
 +------------------------------------------+

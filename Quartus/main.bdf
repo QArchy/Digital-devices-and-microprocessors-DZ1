@@ -484,35 +484,6 @@ applicable agreement for further details.
 	)
 )
 (symbol
-	(rect 264 264 440 344)
-	(text "counter" (rect 5 0 41 12)(font "Arial" ))
-	(text "inst" (rect 8 64 25 76)(font "Arial" ))
-	(port
-		(pt 0 32)
-		(input)
-		(text "clk" (rect 0 0 14 12)(font "Arial" ))
-		(text "clk" (rect 21 27 35 39)(font "Arial" ))
-		(line (pt 0 32)(pt 16 32))
-	)
-	(port
-		(pt 0 48)
-		(input)
-		(text "reset" (rect 0 0 24 12)(font "Arial" ))
-		(text "reset" (rect 21 43 45 55)(font "Arial" ))
-		(line (pt 0 48)(pt 16 48))
-	)
-	(port
-		(pt 176 32)
-		(output)
-		(text "out_pos[15..0]" (rect 0 0 70 12)(font "Arial" ))
-		(text "out_pos[15..0]" (rect 96 27 166 39)(font "Arial" ))
-		(line (pt 176 32)(pt 160 32)(line_width 3))
-	)
-	(drawing
-		(rectangle (rect 16 16 160 64))
-	)
-)
-(symbol
 	(rect 232 264 264 280)
 	(text "VCC" (rect 7 0 27 10)(font "Arial" (font_size 6)))
 	(text "inst5" (rect 3 5 26 17)(font "Arial" )(invisible))
@@ -702,6 +673,35 @@ applicable agreement for further details.
 		(circle (rect 31 12 39 20))
 	)
 )
+(symbol
+	(rect 264 264 440 344)
+	(text "inputCounter" (rect 5 0 67 12)(font "Arial" ))
+	(text "inst" (rect 8 64 25 76)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "clk" (rect 0 0 14 12)(font "Arial" ))
+		(text "clk" (rect 21 27 35 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "reset" (rect 0 0 24 12)(font "Arial" ))
+		(text "reset" (rect 21 43 45 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 176 32)
+		(output)
+		(text "out_pos[24..0]" (rect 0 0 70 12)(font "Arial" ))
+		(text "out_pos[24..0]" (rect 96 27 166 39)(font "Arial" ))
+		(line (pt 176 32)(pt 160 32)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 160 64))
+	)
+)
 (connector
 	(pt 816 352)
 	(pt 792 352)
@@ -729,22 +729,6 @@ applicable agreement for further details.
 (connector
 	(pt 936 400)
 	(pt 912 400)
-)
-(connector
-	(text "out_pos[15]" (rect 482 336 539 348)(font "Arial" ))
-	(pt 536 352)
-	(pt 472 352)
-)
-(connector
-	(text "out_pos[15..0]" (rect 448 298 460 368)(font "Arial" )(vertical))
-	(pt 472 296)
-	(pt 472 352)
-	(bus)
-)
-(connector
-	(pt 472 352)
-	(pt 472 376)
-	(bus)
 )
 (connector
 	(pt 440 296)
@@ -939,8 +923,24 @@ applicable agreement for further details.
 	(pt 1184 232)
 	(pt 1184 248)
 )
+(connector
+	(text "out_pos[24..0]" (rect 448 298 460 368)(font "Arial" )(vertical))
+	(pt 472 296)
+	(pt 472 352)
+	(bus)
+)
+(connector
+	(pt 472 352)
+	(pt 472 376)
+	(bus)
+)
+(connector
+	(text "out_pos[15]" (rect 482 336 539 348)(font "Arial" ))
+	(pt 536 352)
+	(pt 472 352)
+)
 (junction (pt 648 384))
 (junction (pt 664 368))
 (junction (pt 680 352))
-(junction (pt 472 352))
 (junction (pt 1184 232))
+(junction (pt 472 352))

@@ -40,8 +40,8 @@ applicable agreement for further details.
 	(port
 		(pt 176 32)
 		(output)
-		(text "out_pos[15..0]" (rect 0 0 55 12)(font "Arial" ))
-		(text "out_pos[15..0]" (rect 100 27 155 39)(font "Arial" ))
+		(text "out_pos[24..0]" (rect 0 0 57 12)(font "Arial" ))
+		(text "out_pos[24..0]" (rect 98 27 155 39)(font "Arial" ))
 		(line (pt 176 32)(pt 160 32)(line_width 3))
 	)
 	(drawing

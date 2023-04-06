@@ -16,7 +16,7 @@
 // PROGRAM "Quartus II 64-Bit"
 // VERSION "Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version"
 
-// DATE "03/28/2023 10:04:49"
+// DATE "04/06/2023 18:14:12"
 
 // 
 // Device: Altera EP4CE6F17C8 Package FBGA256
@@ -28,7 +28,7 @@
 
 `timescale 1 ps/ 1 ps
 
-module main (
+module main_copy (
 	\LED-A ,
 	clk,
 	\LED-B ,
